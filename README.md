@@ -10,20 +10,18 @@ yarn add redux-persist
 
 yarn add @react-native-async-storage/async-storage
 
-yarn add redux-persist
-
 CHAMAR NO INDEX DE ALGUMA PAGINA:
 
 const dispatch = useAppDispatch();
 
-const onLogin: (params: LoginFormType) => void = async (params) => {
-await dispatch(loginAction(params));
+const nomeFunção: (params: TipoDoParam) => void = async (params) => {
+await dispatch(funçãoDoRedux(params));
 };
 
-const { status } = useAppSelector((state: RootState) => state.authReducer);
+const { variavel } = useAppSelector((state: RootState) => state.nomeReducer);
 
 CARREGAR AUTOMATICAMENTE AO INICIAR A PAGINA:
 
 useEffect(() => {
-await dispatch(loginAction(params));
+await dispatch(nomeFunção(params));
 })
